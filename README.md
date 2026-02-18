@@ -2,12 +2,15 @@
 
 # VisionScript
 
-[VisionScript](https://visionscript.dev) is an abstract programming language for doing common computer vision tasks, fast.
+[VisionScript](https://visionscript.dev) was an abstract programming language for doing common computer vision tasks, fast.
 
 VisionScript is built in Python, offering a simple syntax for running object detection, classification, and segmentation models. [Read the documentation](https://visionscript.dev/docs/).
 
 [View the demo](https://vimeo.com/856043804).
 
+<details>
+    
+<summary>Old instructions for reference</summary>
 ## Get Started 🚀
 
 First, install VisionScript:
@@ -181,3 +184,5 @@ VisionScript provides abstract wrappers around:
 ## License 📝
 
 This project is licensed under an [MIT license](LICENSE).
+
+</details>
