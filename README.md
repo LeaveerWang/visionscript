@@ -47,13 +47,11 @@ visionscript --notebook
 
 This will open a notebook in your browser. Notebooks are ephermal. You will need to copy your code to a file to save it.
 
-**Host header injection:** If the app builds URLs from the request’s Host header (e.g. when behind a proxy), a forged Host can cause the notebook or cloud UI to send requests to an attacker-controlled domain (Host header poisoning). To avoid that, the app no longer trusts the request host for building API or share URLs.
-
-**Optional (deployment):** When you run the notebook or cloud server behind a reverse proxy or need a fixed public URL (e.g. for sharing or og:image), set the canonical base URL so all such URLs use your domain:
+When you run the notebook or cloud server behind a reverse proxy or need a fixed public URL, set the canonical base URL so all such URLs use your domain:
 
 ```bash
 export VISIONSCRIPT_BASE_URL="https://your-domain.com/"
-# or
+# AND
 export API_URL="https://your-domain.com/"
 ```
 
