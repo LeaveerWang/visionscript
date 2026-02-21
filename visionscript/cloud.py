@@ -18,6 +18,10 @@ API_KEY = uuid.uuid4().hex
 _raw = os.environ.get("VISIONSCRIPT_BASE_URL", "").strip() or os.environ.get("API_URL", "").strip()
 API_URL = (_raw.rstrip("/") + "/") if _raw else ""
 
+if not API_URL:
+    print('API_URL and VISIONSCRIPT_BASE_URL must be set.')
+    exit()
+
 if not os.path.exists("scripts.json"):
     with open("scripts.json", "w") as f:
         json.dump({}, f)
