@@ -14,7 +14,6 @@ app = Flask(__name__)
 
 API_KEY = uuid.uuid4().hex
 
-# CVE-2025-69882: single source for base URL; never use request.url_root.
 # Same env as notebook: VISIONSCRIPT_BASE_URL or API_URL; when unset, "" (relative).
 _raw = os.environ.get("VISIONSCRIPT_BASE_URL", "").strip() or os.environ.get("API_URL", "").strip()
 API_URL = (_raw.rstrip("/") + "/") if _raw else ""
