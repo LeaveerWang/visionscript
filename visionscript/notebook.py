@@ -18,10 +18,13 @@ from visionscript.lang import parser
 
 app = Flask(__name__)
 
-# Single source for base URL (CVE-2025-69882). Never use request.url_root.
 # Set via env VISIONSCRIPT_BASE_URL or API_URL; when unset, use "" (relative URLs).
 _raw = os.environ.get("VISIONSCRIPT_BASE_URL", "").strip() or os.environ.get("API_URL", "").strip()
-API_URL = (_raw.rstrip("/") + "/") if _raw else ""
+API_URL = (_raw.rstrip("/") + "/") if _raw else 
+
+if not API_URL:
+    print('API_URL and VISIONSCRIPT_BASE_URL must be set.')
+    exit()
 
 notebooks = {}
 
